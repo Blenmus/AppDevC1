@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment2">
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.example.kotlinapp_task.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment2_to_nextScreenFragment"
+            app:destination="@id/nextScreenFragment"
+            app:enterAnim="@android:anim/slide_in_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/nextScreenFragment"
+        android:name="com.example.kotlinapp_task.NextScreenFragment"
+        android:label="NextScreenFragment" >
+        <argument
+            android:name="result"
+            app:argType="string" />
+    </fragment>
+</navigation>
